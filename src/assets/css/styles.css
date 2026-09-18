@@ -4,121 +4,69 @@
 */
 
 :root {
-    --primary-color: #1a1a1a;
+    --primary-color: #000000;
     --accent-color: #b8860b;
-    --text-color: #333333;
-    --light-gray: #f4f4f4;
+    --text-color: #1a1a1a;
+    --light-gray: #f2f2f2;
     --white: #ffffff;
-    --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    --transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    line-height: 1.6;
-    color: var(--text-color);
-    background-color: var(--white);
-    overflow-x: hidden;
-}
-
-/* Typography */
-h1, h2, h3 {
-    font-weight: 300;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--primary-color);
-}
-
-/* Layout */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* Header & Nav */
-header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    padding: 20px 0;
-    transition: var(--transition);
-    background: transparent;
-}
-
-header.scrolled {
-    background: rgba(255, 255, 255, 0.95);
-    padding: 15px 0;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+    letter-spacing: -0.01em;
 }
 
 .logo {
-    font-size: 24px;
-    font-weight: 700;
-    color: var(--primary-color);
-    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    letter-spacing: 3px;
+    font-size: 20px;
 }
 
-.nav-links {
-    display: flex;
-    list-style: none;
-}
-
-.nav-links li {
-    margin-left: 30px;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: var(--primary-color);
-    font-size: 14px;
-    font-weight: 500;
-    text-transform: uppercase;
-    transition: var(--transition);
-}
-
-.nav-links a:hover {
-    color: var(--accent-color);
-}
-
-/* Hero Section */
 .hero {
     height: 100vh;
     display: flex;
     align-items: center;
-    background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('../img/hero-bg.jpg') center/cover no-repeat;
-    color: var(--white);
-    text-align: center;
-}
-
-.hero-content {
-    width: 100%;
+    justify-content: flex-start;
+    padding-left: 10%;
+    background: linear-gradient(90deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0) 100%), 
+                url('https://s.alicdn.com/@sc04/kf/H19c6adebd34f4d779b2e048e5952ad27G/SUS304-Stainless-Steel-Digital-Waterfall-Rain-Shower.jpg') center/cover no-repeat;
+    text-align: left;
 }
 
 .hero h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
-    color: var(--white);
+    font-size: 64px;
+    font-weight: 200;
+    line-height: 1.1;
+    margin-bottom: 25px;
 }
 
 .hero p {
-    font-size: 18px;
-    margin-bottom: 30px;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
+    font-size: 20px;
+    font-weight: 300;
+    max-width: 500px;
+    margin-left: 0;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+/* Certificate Section */
+.cert-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    opacity: 0.6;
+    margin-top: 50px;
+}
+
+.cert-item {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: 1px solid #ccc;
+    padding: 10px 20px;
 }
 
 .btn {
